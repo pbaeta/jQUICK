@@ -1,0 +1,208 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="../../css/jQUIck.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+<script type="text/javascript" src="jQUIck.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+});
+
+</script>
+</head>
+
+<body>
+<div class="wrapper">
+    <h1>jQUICK</h1>
+    <p>j<strong>Q</strong>uery  <strong>U</strong>ser <strong>I</strong>nterface and <strong>C</strong>ontrols Kit</p>
+    <p>&nbsp;</p>
+    <p>jQUICk (or QUIC for short) is a UI/UX suite of jQuery pugins used to create and style user interaction widgets and elements like: butons, form inputs and other controls.<br />
+This suite can be used to style and boost a complex web app or just to add a simple form control to a site. Likewise the level of knowlege needed to implement this suite is minimal (though at performance expense) but for the savy developer, more effecient and flexible methods are provided.</p>
+    
+    <h2>Usage</h2>
+    <p>To use JQUIck first you'll  need to include the JS and CSS files on the head section of your HTML and after that set the classes of elements to the fallowing examples</p>
+</div>
+<div class="wrapper">
+  <h2>Examples</h2>
+  <h3>The buttons</h3>
+  <p>Shapes</p>
+  <p><a href="#" class="button">Button</a></p>
+  <p>Sizes</p>
+  <p><a href="#" class="button tiny">tiny</a>&nbsp; <a href="#" class="button small">Small</a>&nbsp;<a href="#" class="button">Regular</a>&nbsp;<a href="#" class="button big">Big</a>&nbsp;<a href="#" class="button supersize">Supersize</a></p>
+  <p>Colors</p>
+  <p><a href="#" class="button dark">Dark</a>&nbsp; <a href="#" class="button light">Light</a>&nbsp;<a href="#" class="button red">Red</a>&nbsp;<a href="#" class="button green">Green</a>&nbsp;<a href="#" class="button blue">Blue</a></p>
+  <p>icons</p>
+  
+  <p><a href="#" class="button small"><span class="jquick"></span>jQuick</a>
+  &nbsp;<a href="#" class="button small"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button small"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button small"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button small">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button small"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button small"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button small"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button small"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button small">Control</a></p>
+  
+  <p><a href="#" class="button"><span class="jQuick"></span> jQuick</a>
+  &nbsp;<a href="#" class="button"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button">Control</a></p>
+  
+  <p><a href="#" class="button big"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="add"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button big">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="upload"></span></a>
+  &nbsp;<a href="#" class="button big">Control</a></p>
+  
+  <p><a href="#" class="button supersize"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="add"></span></a>
+  &nbsp; <a href="#" class="button supersize"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button supersize">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button supersize">UP <span class="upload"></span></a>
+  &nbsp;<a href="#" class="button supersize">Control</a></p>
+  
+  <h3>Form Elements</h3>
+    
+  <p> DropDown</p>
+    
+     <select id="source">
+        <option selected="selected" value="BR">Brasil</option>
+        <option value="FR">France</option>
+        <option value="DE">Germany</option>
+        <option value="IN">India</option>
+        <option value="JP">Japan</option>
+        <option value="RS">Serbia</option>
+        <option value="UK">United Kingdom</option>
+        <option value="US">United States</option>
+    </select>
+    <p>File Inputs</p>
+    <p><input name="imagem" type="file" id="file" /> &nbsp;<a id="test" class="button">teste</a>&nbsp;<input name="pass" type="password" value="Password" /> &nbsp;<input name="text" type="text" value="Texto" /> </p>
+    <div class="collumnDouble">
+        <p>Checkboxes</p>
+        <ul>
+            <li><label for="ch_effects">Display effects: </label><input type="checkbox" id="ch_effects" name="ch_effects" data-on="Show effects" data-off="Hide effects" /></li>
+            <li><label for="ch_location">Enable location tracking: </label><input type="checkbox" id="ch_location" name="ch_location" checked /></li>
+            <li><label for="ch_showsearch">Include me in search results: </label><input type="checkbox" id="ch_showsearch" name="ch_showsearch" /></li>
+            <li><label for="ch_emails">Email notifications: </label><input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF" /></li>
+        </ul>
+  </div>
+  <div class="collumnDouble">
+        <p>Radio</p>
+  		<p class="field switch">
+		<input type="radio" id="radio1" name="field"  checked />enable
+		<input type="radio" id="radio2" name="field" />disable
+		<label for="radio1" class="cb-enable selected"><span>Enable</span></label>
+		<label for="radio2" class="cb-disable"><span>Disable</span></label>
+	</p>
+	<p class="field switch">
+		<label class="cb-enable"><span>On</span></label>
+		<label class="cb-disable selected"><span>Off</span></label>
+		<input type="checkbox" id="checkbox" class="checkbox" name="field2" /> Checkbox
+	</p>
+  </div>
+  <p class="cleared">&nbsp;</p>
+  <h3>Grouping Elements</h3>
+  
+  <p>The ToolBar</p>
+    <ul class="buttons">
+        <li><a href="#" class="button left">Left</a></li>
+        <li><a href="#" class="button middle">Middle</a></li>
+        <li><a href="#" class="button right">Right</a></li>
+    </ul>
+    <p class="cleared"></p>
+  	<p>The Tabs</p>
+      <div style="position:relative">
+        <ul id="myTabs">
+            <li><a href="#first" class="selected">First</a></li>
+            <li><a href="#second">Second</a></li>
+            <li><a href="#third">Third</a></li>
+            <li><a href="ajax.html">Forth</a></li>
+        </ul>
+        <div id="first">
+         First Tab content
+        </div>
+        <!--<div id="second">
+         Second Tab content
+        </div>-->
+        <div id="third">
+         Third Tab content
+        </div>
+        <div id="forth">Ajax aqui!</div>
+    </div>
+    <p class="cleared"></p>
+    
+    <!--<p>The Accordion</p>
+    <ul class="menu">
+        <li><a href="#">Frist</a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+    </ul>
+    <p class="cleared"></p>-->
+    
+    <p>The scroller</p>
+    <ul id="myScroll" >
+        <li><a href="#">Frist</a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+    </ul>
+    
+    
+    <ul id="myScroll2" >
+        <li><a href="#">Frist</a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+        <li><a href="#">Third</a></li>
+    </ul>
+    
+    <p class="cleared"></p>
+    
+    
+    <h1>Fedback Elements</h1>
+    <p>The Message</p>
+    <p>The Baloon</p>
+ 
+</div>
+</body>
+</html>

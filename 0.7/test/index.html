@@ -1,0 +1,475 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="css/jquick_0.5.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+	$('#trigerModal').click(function(){ 
+							$('#myModal').quickModal();
+							});
+	$('#trigerModal2').click(function(){ 
+							$('#myModal2').quickModal({
+												type: 'content'
+ 											});
+							});
+});
+
+
+
+</script>
+</head>
+
+<body>
+<div class="wrapper grid">
+    <h1>jQUICK</h1>
+    <p>j<strong>Q</strong>uery  <strong>U</strong>ser <strong>I</strong>nterface and <strong>C</strong>ontrols Kit</p>
+    <p>&nbsp;</p>
+    <p>jQUICk (or QUIC for short) is a UI/UX suite of jQuery pugins used to create and style user interaction widgets and elements like: butons, form inputs and other controls.<br />
+This suite can be used to style and boost a complex web app or just to add a simple form control to a site. Likewise the level of knowlege needed to implement this suite is minimal (though at performance expense) but for the savy developer, more effecient and flexible methods are provided.</p>
+    
+    <h2>Usage</h2>
+    <p>To use JQUIck first you'll  need to include the JS and CSS files on the head section of your HTML and after that set the classes of elements to the fallowing examples</p>
+</div>
+<div class="wrapper grid">
+  <h2>Examples</h2>
+  <h3>The buttons</h3>
+  <p>Shapes</p>
+  <p><a href="#" class="button">Button</a></p>
+  <p>Sizes</p>
+  <p><a href="#" class="button tiny">tiny</a>&nbsp; <a href="#" class="button small">Small</a>&nbsp;<a href="#" class="button">Regular</a>&nbsp;<a href="#" class="button big">Big</a>&nbsp;<a href="#" class="button supersize">Supersize</a></p>
+  <p>Colors</p>
+  <p><a href="#" class="button dark">Dark</a>&nbsp; <a href="#" class="button light">Light</a>&nbsp;<a href="#" class="button red">Red</a>&nbsp;<a href="#" class="button green">Green</a>&nbsp;<a href="#" class="button blue">Blue</a></p>
+  <p>icons</p>
+  
+  <p><a href="#" class="button small"><span class="jquick"></span>jQuick</a>
+  &nbsp;<a href="#" class="button small"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button small"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button small"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button small">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button small"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button small"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button small"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button small"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button small">Control</a></p>
+  
+  <p><a href="#" class="button"><span class="jQuick"></span> jQuick</a>
+  &nbsp;<a href="#" class="button"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button">Control</a></p>
+  
+  <p><a href="#" class="button big"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="add"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button big">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="upload"></span></a>
+  &nbsp;<a href="#" class="button big">Control</a></p>
+  
+  <p><a href="#" class="button supersize"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="add"></span></a>
+  &nbsp; <a href="#" class="button supersize"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button supersize">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button supersize">UP <span class="upload"></span></a>
+  &nbsp;<a href="#" class="button supersize">Control</a></p>
+  
+  <form> 
+     <div>
+       <h3>Form Elements</h3>
+       
+        <p> DropDown</p>
+        
+        <select id="source">
+            <option selected="selected" value="BR">Brasil</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="IN">India</option>
+            <option value="JP">Japan</option>
+            <option value="RS">Serbia</option>
+            <option value="UK">United Kingdom</option>
+            <option value="US">United States</option>
+        </select>
+        </div>
+        
+        <div class="row">
+            <p>File Inputs</p>
+            <div class="col-5"><input name="imagem" type="file" id="file" /> <a id="test" class="button">teste</a></div>
+            <div class="col-3"><input name="pass" type="password" value="Password" /></div>
+            <div class="col-4"><input name="text" type="text" value="Texto" /></div>
+        </div>
+        <div class="row">    
+            <div class="col-6">
+                <p>Checkboxes</p>
+                <ul>
+                    <li><label for="ch_effects">Display effects: </label><input type="checkbox" id="ch_effects" name="ch_effects" data-on="Show effects" data-off="Hide effects" /></li>
+                    <li><label for="ch_location">Enable location tracking: </label><input type="checkbox" id="ch_location" name="ch_location" checked /></li>
+                    <li><label for="ch_showsearch">Include me in search results: </label><input type="checkbox" id="ch_showsearch" name="ch_showsearch" /></li>
+                    <li><label for="ch_emails">Email notifications: </label><input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF" /></li>
+                </ul>
+          </div>
+          <div class="col-6">
+                <p>Radio</p>
+                <p class="field switch">
+                    <input type="radio" id="radio1" name="field"  checked />enable
+                    <input type="radio" id="radio2" name="field" />disable
+                    <label for="radio1" class="cb-enable selected"><span>Enable</span></label>
+                    <label for="radio2" class="cb-disable"><span>Disable</span></label>
+                </p>
+                <p class="field switch">
+                    <label class="cb-enable"><span>On</span></label>
+                    <label class="cb-disable selected"><span>Off</span></label>
+                    <input type="checkbox" id="checkbox" class="checkbox" name="field2" /> Checkbox
+                </p>
+          </div>
+      </div>
+  </form>
+  
+  
+  <h3>Grouping Elements</h3>
+  
+  <p>The ToolBar</p>
+    <ul class="buttons">
+        <li><a href="#" class="button left">Left</a></li>
+        <li><a href="#" class="button middle">Middle</a></li>
+        <li><a href="#" class="button right">Right</a></li>
+    </ul>
+    <p class="cleared"></p>
+  	<p>The Tabs</p>
+      <div style="position:relative">
+        <ul id="myTabs">
+            <li><a href="#first" class="selected">First</a></li>
+            <li><a href="#second">Second</a></li>
+            <li><a href="#third">Third</a></li>
+            <li><a href="ajax.html">Forth</a></li>
+        </ul>
+        <div id="first">
+         First Tab content
+        </div>
+        <!--<div id="second">
+         Second Tab content
+        </div>-->
+        <div id="third">
+         Third Tab content
+        </div>
+        <div id="forth">Ajax aqui!</div>
+    </div>
+    <p class="cleared"></p>
+    
+    <p>The Accordion</p>
+    <ul class="menu">
+        <li><a href="#">Frist</a></li>
+        <li><a href="#">Second</a></li>
+        <li><a href="#">Third</a></li>
+    </ul>
+    <p class="cleared"></p>
+        <div class="row">
+            <p>The scroller</p>
+            <div class="col-6">
+                <ul id="myScroll" >
+                    <li><a href="#">Frist</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                </ul>
+            </div>
+            <div class="col-6">
+                <ul id="myScroll2" >
+                    <li><a href="#">Frist</a></li>
+                    <li><a href="#">Second</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                    <li><a href="#">Third</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+        <h1>Fedback Elements</h1>
+        
+        <p>The Dialog</p>
+        
+        <div class="col-3"><a href="#" id="trigerModal" class="button blue"><i class="icon-comment"></i> Open Dialog</a></div>
+        <div class="col-3"><a href="#" id="trigerModal2" class="button dark"><i class="icon-folder-open"></i> Open page</a></div>
+        
+        <div id="myModal">This is a msg</div> <div id="myModal2">This is a msg</div>
+        
+        <p>The Baloon</p>
+ 		</div>
+	</div>
+
+    <div class="wrapper grid">
+    
+        <h1>The Flexible Grid</h1>
+        <div class="row">
+        <h2>Master Grid</h2>
+        
+            <div class="col-12 marked">Col 12</div>
+            <div class="col-1 marked">C-1</div><div class="col-11 marked">Col 11</div>
+            <div class="col-2 marked">Col-2</div><div class="col-10 marked">Col 10</div>
+            <div class="col-3 marked">Col 3</div><div class="col-9 marked">Col 9</div>
+            <div class="col-4 marked">Col 4</div><div class="col-8 marked">Col 8</div>
+            <div class="col-5 marked">Col 5</div><div class="col-7 marked">Col 7</div>
+            <div class="col-6 marked">Col 6</div><div class="col-6 marked">Col 6</div>
+            <div class="col-7 marked">Col 7</div><div class="col-5 marked">Col 5</div>
+            <div class="col-8 marked">Col 8</div><div class="col-4 marked">Col 4</div>
+            <div class="col-9 marked">Col 9</div><div class="col-3 marked">Col 3</div>
+            <div class="col-10 marked">Col 10</div><div class="col-2 marked">Col 2</div>
+            <div class="col-11 marked">Col 11</div><div class="col-1 marked clearfix">Col 1</div>
+        </div>
+        <div class="row">
+        <h2>Grid in use</h2>
+        
+            <div class="col-6 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-6 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+            
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.3</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+           
+        </div>
+        <h2>Offset Grid</h2>
+        
+        <div class="col-1 offset-11 marked">Off 11</div> 
+        <div class="col-2 offset-10 marked">Offset 10</div>
+        <div class="col-3 offset-9 marked">Offset 9</div>
+        <div class="col-4 offset-8 marked">Offset 8</div>
+        <div class="col-5 offset-7 marked">Offset 7</div>
+        <div class="col-6 offset-6 marked">Offset 6</div>
+        <div class="col-7 offset-5 marked">Offset 5</div>
+        <div class="col-8 offset-4 marked">Offset 4</div>
+        <div class="col-9 offset-3 marked">Offset 3</div>
+        <div class="col-10 offset-2 marked">Offset 2</div>
+        <div class="col-11 offset-1 marked">Offset 1</div> 
+    
+    
+    </div>
+
+	<div class="grid wrapper">
+		<div class="row">
+    		<h2>The Symbols</h2>
+    		
+            <div class="col-3">
+                <ul class="icons">
+                  <li class="first"><i class="icon-adjust icon-2x"></i> icon-adjust</li>
+                  <li><i class="icon-asterisk icon-2x"></i> icon-asterisk</li>
+                  <li><i class="icon-ban-circle icon-2x"></i> icon-ban-circle</li>
+                  <li><i class="icon-bar-chart icon-2x"></i> icon-bar-chart</li>
+                  <li><i class="icon-barcode icon-2x"></i> icon-barcode</li>
+                  <li><i class="icon-beaker icon-2x"></i> icon-beaker</li>
+                  <li><i class="icon-beer icon-2x"></i> icon-beer</li>
+                  <li><i class="icon-bell icon-2x"></i> icon-bell</li>
+                  <li><i class="icon-bell-alt icon-2x"></i> icon-bell-alt</li>
+                  <li><i class="icon-bolt icon-2x"></i> icon-bolt</li>
+                  <li><i class="icon-book icon-2x"></i> icon-book</li>
+                  <li><i class="icon-bookmark icon-2x"></i> icon-bookmark</li>
+                  <li><i class="icon-bookmark-empty icon-2x"></i> icon-bookmark-empty</li>
+                  <li><i class="icon-briefcase icon-2x"></i> icon-briefcase</li>
+                  <li><i class="icon-bullhorn icon-2x"></i> icon-bullhorn</li>
+                  <li><i class="icon-calendar icon-2x"></i> icon-calendar</li>
+                  <li><i class="icon-camera icon-2x"></i> icon-camera</li>
+                  <li><i class="icon-camera-retro icon-2x"></i> icon-camera-retro</li>
+                  <li><i class="icon-certificate icon-2x"></i> icon-certificate</li>
+                  <li><i class="icon-check icon-2x"></i> icon-check</li>
+                  <li><i class="icon-check-empty icon-2x"></i> icon-check-empty</li>
+                  <li><i class="icon-circle icon-2x"></i> icon-circle</li>
+                  <li><i class="icon-circle-blank icon-2x"></i> icon-circle-blank</li>
+                  <li><i class="icon-cloud icon-2x"></i> icon-cloud</li>
+                  <li><i class="icon-cloud-download icon-2x"></i> icon-cloud-download</li>
+                  <li><i class="icon-cloud-upload icon-2x"></i> icon-cloud-upload</li>
+                  <li><i class="icon-coffee icon-2x"></i> icon-coffee</li>
+                  <li><i class="icon-cog icon-2x"></i> icon-cog</li>
+                  <li><i class="icon-cogs icon-2x"></i> icon-cogs</li>
+                  <li><i class="icon-comment icon-2x"></i> icon-comment</li>
+                  <li><i class="icon-comment-alt icon-2x"></i> icon-comment-alt</li>
+                  <li><i class="icon-comments icon-2x"></i> icon-comments</li>
+                  <li><i class="icon-comments-alt icon-2x"></i> icon-comments-alt</li>
+                  <li><i class="icon-credit-card icon-2x"></i> icon-credit-card</li>
+                  <li><i class="icon-dashboard icon-2x"></i> icon-dashboard</li>
+                  <li><i class="icon-desktop icon-2x"></i> icon-desktop</li>
+                  <li><i class="icon-download icon-2x"></i> icon-download</li>
+                  <li class="last"><i class="icon-download-alt icon-2x"></i> icon-download-alt</li>
+                </ul>
+            </div>
+            
+            <div class="col-3">
+            	
+                <ul class="icons">
+                  <li class="first"><i class="icon-edit icon-2x"></i> icon-edit</li>
+                  <li><i class="icon-envelope icon-2x"></i> icon-envelope</li>
+                  <li><i class="icon-envelope-alt icon-2x"></i> icon-envelope-alt</li>
+                  <li><i class="icon-exchange icon-2x"></i> icon-exchange</li>
+                  <li><i class="icon-exclamation-sign icon-2x"></i> icon-exclamation-sign</li>
+                  <li><i class="icon-external-link icon-2x"></i> icon-external-link</li>
+                  <li><i class="icon-eye-close icon-2x"></i> icon-eye-close</li>
+                  <li><i class="icon-eye-open icon-2x"></i> icon-eye-open</li>
+                  <li><i class="icon-facetime-video icon-2x"></i> icon-facetime-video</li>
+                  <li><i class="icon-fighter-jet icon-2x"></i> icon-fighter-jet</li>
+                  <li><i class="icon-film icon-2x"></i> icon-film</li>
+                  <li><i class="icon-filter icon-2x"></i> icon-filter</li>
+                  <li><i class="icon-fire icon-2x"></i> icon-fire</li>
+                  <li><i class="icon-flag icon-2x"></i> icon-flag</li>
+                  <li><i class="icon-folder-close icon-2x"></i> icon-folder-close</li>
+                  <li><i class="icon-folder-open icon-2x"></i> icon-folder-open</li>
+                  <li><i class="icon-folder-close-alt icon-2x"></i> icon-folder-close-alt</li>
+                  <li><i class="icon-folder-open-alt icon-2x"></i> icon-folder-open-alt</li>
+                  <li><i class="icon-food icon-2x"></i> icon-food</li>
+                  <li><i class="icon-gift icon-2x"></i> icon-gift</li>
+                  <li><i class="icon-glass icon-2x"></i> icon-glass</li>
+                  <li><i class="icon-globe icon-2x"></i> icon-globe</li>
+                  <li><i class="icon-group icon-2x"></i> icon-group</li>
+                  <li><i class="icon-hdd icon-2x"></i> icon-hdd</li>
+                  <li><i class="icon-headphones icon-2x"></i> icon-headphones</li>
+                  <li><i class="icon-heart icon-2x"></i> icon-heart</li>
+                  <li><i class="icon-heart-empty icon-2x"></i> icon-heart-empty</li>
+                  <li><i class="icon-home icon-2x"></i> icon-home</li>
+                  <li><i class="icon-inbox icon-2x"></i> icon-inbox</li>
+                  <li><i class="icon-info-sign icon-2x"></i> icon-info-sign</li>
+                  <li><i class="icon-key icon-2x"></i> icon-key</li>
+                  <li><i class="icon-leaf icon-2x"></i> icon-leaf</li>
+                  <li><i class="icon-laptop icon-2x"></i> icon-laptop</li>
+                  <li><i class="icon-legal icon-2x"></i> icon-legal</li>
+                  <li><i class="icon-lemon icon-2x"></i> icon-lemon</li>
+                  <li><i class="icon-lightbulb icon-2x"></i> icon-lightbulb</li>
+                  <li><i class="icon-lock icon-2x"></i> icon-lock</li>
+                  <li class="last"><i class="icon-unlock icon-2x"></i> icon-unlock</li>
+                </ul>
+    
+            </div>
+            
+            <div class="col-3">
+            
+            			
+                <ul class="icons">
+                  <li class="first"><i class="icon-magic icon-2x"></i> icon-magic</li>
+                  <li><i class="icon-magnet icon-2x"></i> icon-magnet</li>
+                  <li><i class="icon-map-marker icon-2x"></i> icon-map-marker</li>
+                  <li><i class="icon-minus icon-2x"></i> icon-minus</li>
+                  <li><i class="icon-minus-sign icon-2x"></i> icon-minus-sign</li>
+                  <li><i class="icon-mobile-phone icon-2x"></i> icon-mobile-phone</li>
+                  <li><i class="icon-money icon-2x"></i> icon-money</li>
+                  <li><i class="icon-move icon-2x"></i> icon-move</li>
+                  <li><i class="icon-music icon-2x"></i> icon-music</li>
+                  <li><i class="icon-off icon-2x"></i> icon-off</li>
+                  <li><i class="icon-ok icon-2x"></i> icon-ok</li>
+                  <li><i class="icon-ok-circle icon-2x"></i> icon-ok-circle</li>
+                  <li><i class="icon-ok-sign icon-2x"></i> icon-ok-sign</li>
+                  <li><i class="icon-pencil icon-2x"></i> icon-pencil</li>
+                  <li><i class="icon-picture icon-2x"></i> icon-picture</li>
+                  <li><i class="icon-plane icon-2x"></i> icon-plane</li>
+                  <li><i class="icon-plus icon-2x"></i> icon-plus</li>
+                  <li><i class="icon-plus-sign icon-2x"></i> icon-plus-sign</li>
+                  <li><i class="icon-print icon-2x"></i> icon-print</li>
+                  <li><i class="icon-pushpin icon-2x"></i> icon-pushpin</li>
+                  <li><i class="icon-qrcode icon-2x"></i> icon-qrcode</li>
+                  <li><i class="icon-question-sign icon-2x"></i> icon-question-sign</li>
+                  <li><i class="icon-quote-left icon-2x"></i> icon-quote-left</li>
+                  <li><i class="icon-quote-right icon-2x"></i> icon-quote-right</li>
+                  <li><i class="icon-random icon-2x"></i> icon-random</li>
+                  <li><i class="icon-refresh icon-2x"></i> icon-refresh</li>
+                  <li><i class="icon-remove icon-2x"></i> icon-remove</li>
+                  <li><i class="icon-remove-circle icon-2x"></i> icon-remove-circle</li>
+                  <li><i class="icon-remove-sign icon-2x"></i> icon-remove-sign</li>
+                  <li><i class="icon-reorder icon-2x"></i> icon-reorder</li>
+                  <li><i class="icon-reply icon-2x"></i> icon-reply</li>
+                  <li><i class="icon-resize-horizontal icon-2x"></i> icon-resize-horizontal</li>
+                  <li><i class="icon-resize-vertical icon-2x"></i> icon-resize-vertical</li>
+                  <li><i class="icon-retweet icon-2x"></i> icon-retweet</li>
+                  <li><i class="icon-road icon-2x"></i> icon-road</li>
+                  <li><i class="icon-rss icon-2x"></i> icon-rss</li>
+                  <li><i class="icon-screenshot icon-2x"></i> icon-screenshot</li>
+                  <li class="last"><i class="icon-search icon-2x"></i> icon-search</li>
+                </ul>
+            </div>
+            
+            <div class="col-3">
+                        
+                <ul class="icons">
+                  <li class="first"><i class="icon-share icon-2x"></i> icon-share</li>
+                  <li><i class="icon-share-alt icon-2x"></i> icon-share-alt</li>
+                  <li><i class="icon-shopping-cart icon-2x"></i> icon-shopping-cart</li>
+                  <li><i class="icon-signal icon-2x"></i> icon-signal</li>
+                  <li><i class="icon-signin icon-2x"></i> icon-signin</li>
+                  <li><i class="icon-signout icon-2x"></i> icon-signout</li>
+                  <li><i class="icon-sitemap icon-2x"></i> icon-sitemap</li>
+                  <li><i class="icon-sort icon-2x"></i> icon-sort</li>
+                  <li><i class="icon-sort-down icon-2x"></i> icon-sort-down</li>
+                  <li><i class="icon-sort-up icon-2x"></i> icon-sort-up</li>
+                  <li><i class="icon-spinner icon-2x"></i> icon-spinner</li>
+                  <li><i class="icon-star icon-2x"></i> icon-star</li>
+                  <li><i class="icon-star-empty icon-2x"></i> icon-star-empty</li>
+                  <li><i class="icon-star-half icon-2x"></i> icon-star-half</li>
+                  <li><i class="icon-tablet icon-2x"></i> icon-tablet</li>
+                  <li><i class="icon-tag icon-2x"></i> icon-tag</li>
+                  <li><i class="icon-tags icon-2x"></i> icon-tags</li>
+                  <li><i class="icon-tasks icon-2x"></i> icon-tasks</li>
+                  <li><i class="icon-thumbs-down icon-2x"></i> icon-thumbs-down</li>
+                  <li><i class="icon-thumbs-up icon-2x"></i> icon-thumbs-up</li>
+                  <li><i class="icon-time icon-2x"></i> icon-time</li>
+                  <li><i class="icon-tint icon-2x"></i> icon-tint</li>
+                  <li><i class="icon-trash icon-2x"></i> icon-trash</li>
+                  <li><i class="icon-trophy icon-2x"></i> icon-trophy</li>
+                  <li><i class="icon-truck icon-2x"></i> icon-truck</li>
+                  <li><i class="icon-umbrella icon-2x"></i> icon-umbrella</li>
+                  <li><i class="icon-upload icon-2x"></i> icon-upload</li>
+                  <li><i class="icon-upload-alt icon-2x"></i> icon-upload-alt</li>
+                  <li><i class="icon-user icon-2x"></i> icon-user</li>
+                  <li><i class="icon-user-md icon-2x"></i> icon-user-md</li>
+                  <li><i class="icon-volume-off icon-2x"></i> icon-volume-off</li>
+                  <li><i class="icon-volume-down icon-2x"></i> icon-volume-down</li>
+                  <li><i class="icon-volume-up icon-2x"></i> icon-volume-up</li>
+                  <li><i class="icon-warning-sign icon-2x"></i> icon-warning-sign</li>
+                  <li><i class="icon-wrench icon-2x"></i> icon-wrench</li>
+                  <li><i class="icon-zoom-in icon-2x"></i> icon-zoom-in</li>
+                  <li class="last"><i class="icon-zoom-out icon-2x"></i> icon-zoom-out</li>
+                </ul>
+                
+            </div>
+    	</div>
+    </div>
+</body>
+</html>

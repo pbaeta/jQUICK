@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="css/jquick_0.5.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+	$('#trigerModal').click(function(){ 
+							$('#myModal').quickModal();
+							});
+	$('#trigerModal2').click(function(){ 
+							$('#myModal2').quickModal({
+												type: 'content'
+ 											});
+							});
+});
+
+
+
+</script>
+</head>
+
+<body>
+<div class="wrapper grid">
+  <h2>Examples</h2>
+  <h3>The buttons</h3>
+  <p>Shapes</p>
+  <p><a href="#" class="button">Button</a></p>
+  <p>Sizes</p>
+  <p><a href="#" class="button tiny">tiny</a>&nbsp; <a href="#" class="button small">Small</a>&nbsp;<a href="#" class="button">Regular</a>&nbsp;<a href="#" class="button big">Big</a>&nbsp;<a href="#" class="button supersize">Supersize</a></p>
+  <p>Colors</p>
+  <p><a href="#" class="button dark">Dark</a>&nbsp; <a href="#" class="button light">Light</a>&nbsp;<a href="#" class="button red">Red</a>&nbsp;<a href="#" class="button green">Green</a>&nbsp;<a href="#" class="button blue">Blue</a></p>
+  <p>icons</p>
+  
+  <p><a href="#" class="button small"><span class="jquick"></span>jQuick</a>
+  &nbsp;<a href="#" class="button small"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button small"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button small"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button small">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button small"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button small"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button small"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button small"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button small">Control</a></p>
+  
+  <p><a href="#" class="button"><span class="jQuick"></span> jQuick</a>
+  &nbsp;<a href="#" class="button"><span class="add"></span>Add</a>
+  &nbsp; <a href="#" class="button"><span class="remove"></span>Remove</a>
+  &nbsp;<a href="#" class="button"><span class="close"></span> Close</a>
+  &nbsp;<a href="#" class="button">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button"><span class="back"></span> Back</a>
+  &nbsp;<a href="#" class="button"><span class="up"></span> Up</a>
+  &nbsp;<a href="#" class="button"><span class="down"></span>Down</a>
+  &nbsp;<a href="#" class="button"><span class="upload"></span> Up</a>
+  &nbsp;<a href="#" class="button">Control</a></p>
+  
+  <p><a href="#" class="button big"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="add"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button big">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button big"><span class="upload"></span></a>
+  &nbsp;<a href="#" class="button big">Control</a></p>
+  
+  <p><a href="#" class="button supersize"><span class="jQuick"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="add"></span></a>
+  &nbsp; <a href="#" class="button supersize"><span class="remove"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="close"></span></a>
+  &nbsp;<a href="#" class="button supersize">Forward <span class="forward"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="back"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="up"></span></a>
+  &nbsp;<a href="#" class="button supersize"><span class="down"></span></a>
+  &nbsp;<a href="#" class="button supersize">UP <span class="upload"></span></a>
+  &nbsp;<a href="#" class="button supersize">Control</a></p>
+  
+  
+    </div>
+</body>
+</html>

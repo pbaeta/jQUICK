@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="css/jquick_0.5.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+	$('#trigerModal').click(function(){ 
+							$('#myModal').quickModal();
+							});
+	$('#trigerModal2').click(function(){ 
+							$('#myModal2').quickModal({
+												type: 'content'
+ 											});
+							});
+});
+
+
+
+</script>
+</head>
+
+<body>
+<div class="wrapper grid">
+   
+  
+  <form> 
+     <div>
+       <h3>Form Elements</h3>
+       
+        <p> DropDown</p>
+        
+        <select id="source">
+            <option selected="selected" value="BR">Brasil</option>
+            <option value="FR">France</option>
+            <option value="DE">Germany</option>
+            <option value="IN">India</option>
+            <option value="JP">Japan</option>
+            <option value="RS">Serbia</option>
+            <option value="UK">United Kingdom</option>
+            <option value="US">United States</option>
+        </select>
+        </div>
+        
+        <div class="row">
+            <p>File Inputs</p>
+            <div class="col-5"><input name="imagem" type="file" id="file" /> <a id="test" class="button">teste</a></div>
+            <div class="col-3"><input name="pass" type="password" value="Password" /></div>
+            <div class="col-4"><input name="text" type="text" value="Texto" /></div>
+        </div>
+        <div class="row">    
+            <div class="col-6">
+                <p>Checkboxes</p>
+                <ul>
+                    <li><label for="ch_effects">Display effects: </label><input type="checkbox" id="ch_effects" name="ch_effects" data-on="Show effects" data-off="Hide effects" /></li>
+                    <li><label for="ch_location">Enable location tracking: </label><input type="checkbox" id="ch_location" name="ch_location" checked /></li>
+                    <li><label for="ch_showsearch">Include me in search results: </label><input type="checkbox" id="ch_showsearch" name="ch_showsearch" /></li>
+                    <li><label for="ch_emails">Email notifications: </label><input type="checkbox" id="ch_emails" name="ch_emails" data-on="ON" data-off="OFF" /></li>
+                </ul>
+          </div>
+          <div class="col-6">
+                <p>Radio</p>
+                <p class="field switch">
+                    <input type="radio" id="radio1" name="field"  checked />enable
+                    <input type="radio" id="radio2" name="field" />disable
+                    <label for="radio1" class="cb-enable selected"><span>Enable</span></label>
+                    <label for="radio2" class="cb-disable"><span>Disable</span></label>
+                </p>
+                <p class="field switch">
+                    <label class="cb-enable"><span>On</span></label>
+                    <label class="cb-disable selected"><span>Off</span></label>
+                    <input type="checkbox" id="checkbox" class="checkbox" name="field2" /> Checkbox
+                </p>
+          </div>
+      </div>
+  </form>
+
+    </div>
+</body>
+</html>

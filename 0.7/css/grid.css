@@ -1,0 +1,211 @@
+/*---------------------------------
+	GRID/COLUMNS
+-----------------------------------
+	tinyfluidgrid.com
+	& girlfriendnyc.com
+	with changes by 99Lime
+-----------------------------------*/
+ /*
+ & Columns : 12 
+ & Gutter %: 20% 
+ & MaxWidth: 1280px
+ */
+ 
+.grid{
+max-width:1220px;
+margin:0 auto;
+padding:0 2em;
+}
+
+.grid.flex{
+width:100%;
+max-width:100%;
+padding:0 2%;
+padding:2em;
+}
+
+.row{
+display:block;
+overflow:hidden;
+clear:both;
+}
+
+
+*[class*="col-"]{
+	margin-left: 0.83333333333333%;
+	margin-right: 0.83333333333333%;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	float: left;
+	display: block;
+}
+
+
+
+*[class*="col-"].alpha{margin-left:0;}
+*[class*="col-"].omega{margin-right:0;}
+ 
+ 
+.col-1  { width: 6.6666666666667%; }
+.col-2  { width: 15%; }
+.col-3  { width: 23.333333333333%; }
+.col-4  { width: 31.666666666667%; }
+.col-5  { width: 40%; }
+.col-6  { width: 48.333333333333%; }
+.col-7  { width: 56.666666666667%; }
+.col-8  { width: 65%; }
+.col-9  { width: 73.333333333333%; }
+.col-10 { width: 81.666666666667%; }
+.col-11 { width: 90%; }
+.col-12 { width: 98.333333333333%; }
+
+
+.offset-1  { margin-left: 9.1666666666667%; }/* +2.5*/
+.offset-2  { margin-left: 17.5%; }
+.offset-3  { margin-left: 25.833333333334%; }
+.offset-4  { margin-left: 34.166666666667%; }
+.offset-5  { margin-left: 42.5%; }
+.offset-6  { margin-left: 50.833333333334%; }
+.offset-7  { margin-left: 59.166666666667%; }
+.offset-8  { margin-left: 67.5%; }
+.offset-9  { margin-left: 75.833333333334%; }
+.offset-10 { margin-left: 84.166666666667%; }
+.offset-11 { margin-left: 92.5%; }
+
+
+
+
+
+.grid img{
+max-width: 100%;
+height:auto;
+}
+
+/*---------------------------------
+	Responsive Grid Media Queries - 1280, 1024, 768, 480
+	1280-1024 	- desktop (default grid)
+	1024-768 	- tablet landscape
+	768-480 	- tablet 
+	480-less 	- phone landscape & smaller
+-----------------------------------*/
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+	
+	.grid *[class*="col-"]{}
+	.grid{max-width: 1024px;}
+	.show-desktop	{display:block;}
+	.hide-desktop	{display:none;}
+	.show-tablet	{display:none;}
+	.hide-tablet	{display:block;}
+	.show-phone		{display:none;}
+	.hide-phone		{display:block;}
+	
+}
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+	
+	.grid *[class*="col-"]{}
+	.grid{max-width: 768px;}
+	.show-desktop	{display:none;}
+	.hide-desktop	{display:block;}
+	.show-tablet	{display:block;}
+	.hide-tablet	{display:none;}
+	.show-phone		{display:none;}
+	.hide-phone		{display:block;}
+	
+}
+
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+
+	.grid *[class*="col-"]{
+	float:none;
+	width:auto;
+	clear:both;
+	display:block;
+	}
+	
+	/* columns inside of columns */
+	.grid *[class*="col-"] [class*="col-"]{
+	margin-left:0;
+	margin-right:0;
+	width:100%;
+	}
+	
+	.grid{max-width: 480px;}
+	.show-desktop	{display:none;}
+	.hide-desktop	{display:block;}
+	.show-tablet	{display:block;}
+	.hide-tablet	{display:none;}
+	.show-phone		{display:none;}
+	.hide-phone		{display:block;}
+	
+	.grid *[class*="offset-"]{ margin-left: 0%; }
+}
+
+@media all and (max-width: 480px) {
+	
+	.grid *[class*="col-"]{
+	float:none;
+	width:auto;
+	clear:both;
+	display:block;
+	}
+	
+	/* columns inside of columns */
+	.grid *[class*="col-"] [class*="col-"]{
+	margin-left:0;
+	margin-right:0;
+	width:100%;
+	}
+	
+	.grid{max-width: 100%;/*320*/}
+	.show-desktop	{display:none;}
+	.hide-desktop	{display:block;}
+	.show-tablet	{display:none;}
+	.hide-tablet	{display:block;}
+	.show-phone		{display:block;}
+	.hide-phone		{display:none;}
+	
+	.grid *[class*="offset-"]{ margin-left: 0%; }
+	
+}
+
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .grid-flex:after, .grid:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+   
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after {
+      clear: both; }
+    .row {
+      zoom: 1; }
+
+
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0}
+.clearfix:after{clear:both;content:' ';display:block;font-size:0;line-height:0;visibility:hidden;width:0;height:0}
+* html .clearfix, *:first-child+html .clearfix{zoom:1}
+
+/* Viewable Grids 
+	To view your grids, add the class .visible to any grid container.
+	This will add a background color so you can see the layout of your grids. 
+*/
+*[class*="col-"].marked{
+background:#eee;
+border:1px dotted #ccc;
+}
+
+    

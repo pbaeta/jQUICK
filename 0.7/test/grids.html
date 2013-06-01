@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="css/jquick_0.5.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+	$('#trigerModal').click(function(){ 
+							$('#myModal').quickModal();
+							});
+	$('#trigerModal2').click(function(){ 
+							$('#myModal2').quickModal({
+												type: 'content'
+ 											});
+							});
+});
+
+
+
+</script>
+</head>
+
+<body>
+
+
+    <div class="wrapper grid">
+    
+        <h1>The Flexible Grid</h1>
+        <div class="row">
+        <h2>Master Grid</h2>
+        
+            <div class="col-12 marked">Col 12</div>
+            <div class="col-1 marked">C-1</div><div class="col-11 marked">Col 11</div>
+            <div class="col-2 marked">Col-2</div><div class="col-10 marked">Col 10</div>
+            <div class="col-3 marked">Col 3</div><div class="col-9 marked">Col 9</div>
+            <div class="col-4 marked">Col 4</div><div class="col-8 marked">Col 8</div>
+            <div class="col-5 marked">Col 5</div><div class="col-7 marked">Col 7</div>
+            <div class="col-6 marked">Col 6</div><div class="col-6 marked">Col 6</div>
+            <div class="col-7 marked">Col 7</div><div class="col-5 marked">Col 5</div>
+            <div class="col-8 marked">Col 8</div><div class="col-4 marked">Col 4</div>
+            <div class="col-9 marked">Col 9</div><div class="col-3 marked">Col 3</div>
+            <div class="col-10 marked">Col 10</div><div class="col-2 marked">Col 2</div>
+            <div class="col-11 marked">Col 11</div><div class="col-1 marked clearfix">Col 1</div>
+        </div>
+        <div class="row">
+        <h2>Grid in use</h2>
+        
+            <div class="col-6 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-6 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-4 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+            
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.3</div>
+            <div class="col-3 marked">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</div>
+            
+           
+        </div>
+        <h2>Offset Grid</h2>
+        
+        <div class="col-1 offset-11 marked">Off 11</div> 
+        <div class="col-2 offset-10 marked">Offset 10</div>
+        <div class="col-3 offset-9 marked">Offset 9</div>
+        <div class="col-4 offset-8 marked">Offset 8</div>
+        <div class="col-5 offset-7 marked">Offset 7</div>
+        <div class="col-6 offset-6 marked">Offset 6</div>
+        <div class="col-7 offset-5 marked">Offset 5</div>
+        <div class="col-8 offset-4 marked">Offset 4</div>
+        <div class="col-9 offset-3 marked">Offset 3</div>
+        <div class="col-10 offset-2 marked">Offset 2</div>
+        <div class="col-11 offset-1 marked">Offset 1</div> 
+    
+    
+    </div>
+
+	
+</body>
+</html>

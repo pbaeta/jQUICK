@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>jQUIck Demo and instructions</title>
+
+<link rel="stylesheet" href="css/jquick_0.5.css" type="text/css" />
+<link rel="stylesheet" href="css/base.css" type="text/css" />
+<link rel="stylesheet" href="css/style.css" type="text/css" />
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="jquick.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#file').quickFileInput();
+	
+	$("#source").quickDropDown();
+	
+	$('input[type=checkbox]').tzCheckbox({labels:['on','off']});
+	
+	$('#myTabs').jQUICKtabs('#forth', {ajax:true});
+	
+	$('#myScroll').quickScroll({direction:'vertical'});
+	$('#myScroll2').quickScroll({
+								direction:'horizontal',
+								background: true,
+								height	: 100,
+								width :	160
+							});
+	$('#trigerModal').click(function(){ 
+							$('#myModal').quickModal();
+							});
+	$('#trigerModal2').click(function(){ 
+							$('#myModal2').quickModal({
+												type: 'content'
+ 											});
+							});
+});
+
+
+
+</script>
+</head>
+
+<body>
+
+  <div class="grid wrapper">
+  <h3>Grouping Elements</h3>
+  
+  <p>The ToolBar</p>
+    <ul class="buttons clearfix">
+        <li><a href="#" class="button left">Left</a></li>
+        <li><a href="#" class="button middle">Middle</a></li>
+        <li><a href="#" class="button right">Right</a></li>
+    </ul>
+
+  	<p>The Tabs</p>
+      <div>
+        <ul id="myTabs">
+            <li><a href="#first" class="selected">First</a></li>
+            <li><a href="#second">Second</a></li>
+            <li><a href="#third">Third</a></li>
+            <li><a href="ajax.html">Forth</a></li>
+        </ul>
+        <div id="first">
+         First Tab content
+        </div>
+        <!--<div id="second">
+         Second Tab content
+        </div>-->
+        <div id="third">
+         Third Tab content
+        </div>
+        <div id="forth">Ajax aqui!</div>
+    </div>
+    <p class="cleared"></p>
+    
+   
+    </div>
+</body>
+</html>
